@@ -1,9 +1,9 @@
 import requests
 import json
 
-access_token = 'EAAUeZC6mFhnYBOxK2fE7hbYdujFB4WDdezwAVPMRXRfOjGZCtaLkOjHPXOWicFTUpc8JsykRJ7A4eQVFvSBzV6QYkU5i9nez2Kwblm09yyCgdS7XzCu0TiLXZAYsWzEgYZCk7vSmHxjWDWC7vSj6ytAvog7JAbHZBZBqZBZAXAp6QId84RE7ZCqfqFd6fttUJZAWkdV8Av2uHX9STApRzNpU3bdXZCZBhhYQhyQrIeAZD'
+access_token = ''
 
-account_id = '170578383605870'
+account_id = ''
 
 url = f'https://graph.facebook.com/v20.0/act_{account_id}/insights'
 
