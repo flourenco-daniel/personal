@@ -2,8 +2,8 @@ import requests
 import csv
 
 # Meta Ads API credentials
-access_token = 'EAAUeZC6mFhnYBOyXmIDrbaRMfZChIFtDDhXWA8zqYafwlb0LywKfuGJ1eOjVeB1I1pmhVRG6ZCpZA04YzgFvFbw4LG3chE0i9twE3BKr7Y8xS0oCgAL6ewBdq5USZAlcJtZCnxgkxRO7KxUu21fZCTCPuWQXhjy2RyinIE68VMoTh04fxAkPnWaCpYXedaeeMTorfCqVUKxF3ZCi6C5UXFxHLisUFHrvUONVEWEZD'
-account_id = '504914304557845'
+access_token = ''
+account_id = ''
 
 # URL for the Meta Ads API insights endpoint
 url = f'https://graph.facebook.com/v20.0/act_{account_id}/insights'
