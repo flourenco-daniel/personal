@@ -1,0 +1,24 @@
+Introduction
+
+**1-Why we need data orchestration?**
+
+Imagine that you have a basic pipeline: Extract -> Clean -> Transform -> Load
+
+Once that clean phase fail, the dependencies (transform and load) will stop
+
+So, you have to check the log and fix the error manually
+
+With data orchestration, check and restart the dependencie that fail, are automatically. This is what Airflow do.
+In real world, you will managing a lot of pipelines. So, do this automatically is a time saver
+
+___________________________________________
+
+**2- Why apache airflow?**
+
+Extract -> Clean -> Transform -> Load
+Airbyte      DBT      DBT     SNOWFLAKE
+
+- Easy to integrate with other services such as above
+- Scalable
+- Muliple scheduler
+

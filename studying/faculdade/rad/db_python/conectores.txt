@@ -1,0 +1,100 @@
+**1- Conectores para BD**
+
+libs de python
+
+psycopg2: Conectar aplicações com postgresql
+
+mysql Connector: Conectar aplicações com mysql
+
+sqlite3: conectar aplicações com sqlite
+
+____________________________
+
+psycopg2:
+    suporte completo às funcionalidades do postgresql
+    excelente desempenho
+    suporte a transações e segurança
+    usar quando tem grandes volumes de dados
+
+____________________________
+
+mysqlconnector
+  facil de instalar e configurar
+  suporte oficial e contínuo da oracle
+  aplicações que exigem suporte contínuo e escalabilidade (ser um pouco mais conservador)
+
+____________________________
+
+sqlite3
+  zero configuração. Já incluido na lib padrão do py
+  leve e rapido para aplicações menores
+  ireal para dev e test
+
+________________________________________________________
+
+**2- Metodos e exceções**
+
+Método:
+  Connect: Estabelece a conexão com o banco de dados
+  Execute: Executa comandos sql no banco de dados
+    cursor.execute("SQL QUERY") <- executar a QUERY
+  Commit: Confirma as transações realizadas
+    connection.commit()
+  Cursor:  - Classe utilizada para enviar os comandos ao banco de dados.
+  Connection: Classe utilizada para gerenciar todas as operações no banco de dados.
+
+vide script "conectores.py"
+________________________________________________________
+
+**3- Tipos de Dados**
+
+INTEGER: numeros inteiros. Bem utilizado para PK pq utiliza só até 4 bytes
+TEXT: textos em geral
+REAL: armazena floats
+BLOB: armazena dados binarios: Fotos, arquivos PDF, qualquer dado em formato binário
+NULL: valores nulos
+DATE: para datas
+
+________________________________________________________
+
+**4- Conexão com Banco de Dados**
+
+SCRIPT: creating_connection.py
+
+________________________________________________________
+
+**5- Metodos e Exceções dos Conectores**
+
+Método connect: (Cria uma conexão)
+
+connections = connect(parameteres)
+______
+
+Método execute: (Executa uma query)
+
+cursor.execute("SQL QUERY")
+
+______
+
+Método commit: (salva as transações)
+Função: connection.commit()
+
+vide script connectores_2.py
+
+______
+
+Método rollback: (desfazer todas as operações pendentes)
+
+connection.rollback()
+
+______
+
+Método fetchone: (retorna a proxima linha encontrada por uma consulta)
+
+cursor.fetchone()
+
+______
+
+Método fetchall: (retorna todas as linhas encontradas por uma consulta)
+
+cursor.fetchall()
