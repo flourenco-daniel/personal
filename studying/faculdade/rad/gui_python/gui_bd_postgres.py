@@ -1,6 +1,6 @@
 import psycopg2 as pg
 
-def credenciais():
+def conectar():
     try:
         conn = pg.connect(
             host = 'localhost',
@@ -17,7 +17,12 @@ def credenciais():
                     preco DECIMAL (10,2) NOT NULL
                     )'''
         
-        cur.execute(query)
+        # cur.execute(query)
+        # conn.commit()
+        cur.execute('''SELECT * FROM Produtos''')
+        registros = cur.fetchall
+        for registro in registros:
+            print(registro)
 
     except Exception as error:
         print(error)
@@ -27,4 +32,4 @@ def credenciais():
         conn.close()
         print('Conexão efetuada com sucesso')
 
-credenciais()
+conectar()
