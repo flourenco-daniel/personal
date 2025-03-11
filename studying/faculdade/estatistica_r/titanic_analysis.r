@@ -22,3 +22,18 @@ mulheres=titanic_train[titanic_train$Sex == "female", ]
 
 prop.table(table(homens$Survived))
 prop.table(table(mulheres$Survived))
+
+#analyzing passenger less then 5 years old
+#we need to fix database because not all passenger have their age defined. lets use the average age on null cells
+#first of all, lets calculate the average excluding null values
+passageiros.com.idade=titanic_train[!is.na(titanic_train$Age),]
+idade.media=mean(passageiros.com.idade$Age)
+idade.media
+
+passageiros.com.idade=titanic_train[!is.na(titanic_train$Age),]
+idade.media=mean(passageiros.com.idade$Age)
+idade.media
+
+titanic_train[is.na(titanic_train$Age), ]$Age <- idade.media 
+criancas <- titanic_train[titanic_train$Age < 5, ]
+prop.table(table(criancas$Survived))
